@@ -1,269 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Treasure Jewels BD</title>
+    <title>Treasure Jewels BD</title>
 
-<style>
+    <meta name="description" content="Treasure Jewels BD - Elegant jewellery at affordable prices.">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    min-height: 100vh;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background:
-        radial-gradient(circle at top, #3b2a0f 0%, #111 35%, #050505 100%);
-    color: white;
-    display: flex;
-    justify-content: center;
-    padding: 25px 15px;
-}
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            min-height: 100vh;
 
-.container {
-    width: 100%;
-    max-width: 430px;
-    text-align: center;
-}
+            background:
+                radial-gradient(circle at top, #fff7df 0%, transparent 35%),
+                linear-gradient(135deg, #fffaf0, #f4e4c1);
 
-/* Logo */
+            display: flex;
+            justify-content: center;
 
-.logo {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-    border-radius: 50%;
-    margin: 10px auto 18px;
-    display: block;
-    filter: drop-shadow(0 0 20px rgba(212,175,55,0.45));
-}
+            padding: 35px 18px;
+            color: #2c2118;
+        }
 
-/* Brand */
+        .container {
+            width: 100%;
+            max-width: 430px;
+            text-align: center;
+        }
 
-.brand {
-    font-size: 28px;
-    letter-spacing: 3px;
-    font-weight: 700;
-    color: #d4af37;
-}
+        /* Main Card */
 
-.tagline {
-    margin-top: 8px;
-    color: #ddd;
-    font-size: 14px;
-    letter-spacing: 1px;
-}
+        .card {
+            background: rgba(255,255,255,0.78);
+            backdrop-filter: blur(14px);
 
-/* Divider */
+            border: 1px solid rgba(185, 140, 70, 0.3);
 
-.divider {
-    width: 70px;
-    height: 2px;
-    background: #d4af37;
-    margin: 20px auto;
-}
+            border-radius: 28px;
 
-/* Main button */
+            padding: 35px 24px;
 
-.shop {
-    display: block;
-    text-decoration: none;
-    color: #080808;
-    background: linear-gradient(135deg, #f8e7a6, #d4af37, #f8e7a6);
-    padding: 16px;
-    border-radius: 14px;
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    box-shadow: 0 8px 25px rgba(212,175,55,0.25);
-    transition: 0.3s;
-}
+            box-shadow:
+                0 15px 40px rgba(80,50,15,0.12);
 
-.shop:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 35px rgba(212,175,55,0.45);
-}
+            animation: fadeUp 0.8s ease;
+        }
 
-/* Social buttons */
+        /* Logo */
 
-.button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+        .logo-box {
+            width: 120px;
+            height: 120px;
 
-    text-decoration: none;
-    color: white;
+            margin: auto;
+            margin-bottom: 18px;
 
-    padding: 15px;
-    margin: 12px 0;
+            border-radius: 50%;
 
-    border: 1px solid rgba(212,175,55,0.45);
-    border-radius: 14px;
+            padding: 5px;
 
-    background: rgba(255,255,255,0.06);
-    backdrop-filter: blur(10px);
+            background:
+                linear-gradient(
+                    135deg,
+                    #8b5d22,
+                    #e4c57a,
+                    #9f6d28
+                );
 
-    font-size: 16px;
-    font-weight: 600;
+            box-shadow:
+                0 8px 25px rgba(145, 100, 35, 0.25);
+        }
 
-    transition: 0.3s;
-}
+        .logo {
+            width: 100%;
+            height: 100%;
 
-.button:hover {
-    transform: translateY(-3px);
-    border-color: #d4af37;
-    background: rgba(212,175,55,0.12);
-    box-shadow: 0 8px 25px rgba(212,175,55,0.15);
-}
+            border-radius: 50%;
 
-.icon {
-    font-size: 21px;
-}
+            object-fit: cover;
 
-/* Collection */
+            background: white;
+        }
 
-.collection {
-    margin-top: 28px;
-    padding: 20px;
+        /* Brand */
 
-    border: 1px solid rgba(212,175,55,0.25);
-    border-radius: 18px;
+        h1 {
+            font-family: Georgia, serif;
 
-    background: rgba(255,255,255,0.04);
-}
+            font-size: 30px;
 
-.collection h2 {
-    color: #d4af37;
-    font-size: 20px;
-    margin-bottom: 8px;
-}
+            color: #4c3218;
 
-.collection p {
-    color: #ccc;
-    font-size: 14px;
-    line-height: 1.6;
-}
+            letter-spacing: 0.5px;
 
-/* Footer */
+            margin-bottom: 8px;
+        }
 
-.footer {
-    margin-top: 30px;
-    padding-bottom: 15px;
+        .tagline {
+            color: #8b682f;
+            font-size: 14px;
 
-    color: #777;
-    font-size: 12px;
-}
+            margin-bottom: 6px;
+        }
 
-.footer span {
-    color: #d4af37;
-}
+        .subtitle {
+            color: #776754;
+            font-size: 14px;
 
-/* Mobile */
+            line-height: 1.6;
 
-@media (max-width: 400px) {
+            margin-bottom: 26px;
+        }
 
-    .brand {
-        font-size: 24px;
-        letter-spacing: 2px;
-    }
+        /* Divider */
 
-    .logo {
-        width: 105px;
-        height: 105px;
-    }
+        .divider {
+            width: 70px;
+            height: 2px;
 
-}
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #b78a42,
+                    transparent
+                );
 
-</style>
+            margin: 18px auto 25px;
+        }
+
+        /* Buttons */
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+
+            padding: 15px 18px;
+
+            margin: 13px 0;
+
+            border-radius: 15px;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-size: 16px;
+            font-weight: 600;
+
+            letter-spacing: 0.2px;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+
+            box-shadow:
+                0 6px 14px rgba(0,0,0,0.12);
+        }
+
+        .social-button:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 20px rgba(0,0,0,0.18);
+        }
+
+        .facebook {
+            background:
+                linear-gradient(
+                    135deg,
+                    #1877F2,
+                    #0c5dcc
+                );
+        }
+
+        .instagram {
+            background:
+                linear-gradient(
+                    135deg,
+                    #833AB4,
+                    #E1306C,
+                    #F77737
+                );
+        }
+
+        .tiktok {
+            background:
+                linear-gradient(
+                    135deg,
+                    #111111,
+                    #303030
+                );
+        }
+
+        .whatsapp {
+            background:
+                linear-gradient(
+                    135deg,
+                    #25D366,
+                    #128C7E
+                );
+        }
+
+        .shop {
+            background:
+                linear-gradient(
+                    135deg,
+                    #6b451c,
+                    #c3974e
+                );
+        }
+
+        /* Small text */
+
+        .scan-text {
+            margin-top: 25px;
+
+            font-size: 13px;
+
+            color: #8c7962;
+
+            line-height: 1.5;
+        }
+
+        /* Footer */
+
+        footer {
+            margin-top: 25px;
+
+            font-size: 12px;
+
+            color: #8e7d68;
+        }
+
+        /* Animation */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile */
+
+        @media (max-width: 480px) {
+
+            body {
+                padding: 20px 14px;
+            }
+
+            .card {
+                padding: 30px 20px;
+                border-radius: 24px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            .social-button {
+                padding: 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <div class="container">
 
-    <!-- LOGO -->
-    <img src="logo.png" class="logo" alt="Treasure Jewels BD">
+    <div class="card">
 
-    <!-- BRAND -->
-    <h1 class="brand">TREASURE JEWELS BD</h1>
+        <!-- LOGO -->
 
-    <p class="tagline">
-        Elegance in Every Detail ✨
-    </p>
+        <div class="logo-box">
 
-    <div class="divider"></div>
+            <img
+                src="logo.png"
+                alt="Treasure Jewels BD Logo"
+                class="logo"
+            >
 
-    <!-- SHOP -->
-    <a class="shop"
-       href="https://www.facebook.com/treasurejewelsbd"
-       target="_blank">
-       🛍️ SHOP NOW
-    </a>
+        </div>
 
-    <!-- WHATSAPP -->
-    <a class="button"
-       href="https://wa.me/880134084472"
-       target="_blank">
 
-       <span class="icon">🟢</span>
-       <span>Order on WhatsApp</span>
+        <!-- BRAND NAME -->
 
-    </a>
+        <h1>Treasure Jewels BD</h1>
 
-    <!-- FACEBOOK -->
-    <a class="button"
-       href="https://www.facebook.com/treasurejewelsbd"
-       target="_blank">
 
-       <span class="icon">📘</span>
-       <span>Facebook</span>
+        <p class="tagline">
+            ✨ Elegance You Deserve ✨
+        </p>
 
-    </a>
 
-    <!-- INSTAGRAM -->
-    <a class="button"
-       href="https://www.instagram.com/treasure_jewels_bd/"
-       target="_blank">
+        <p class="subtitle">
 
-       <span class="icon">📸</span>
-       <span>Instagram</span>
+            সুন্দর ও স্টাইলিশ Jewellery Collection
+            পেতে আমাদের সাথে যুক্ত থাকুন।
 
-    </a>
+            <br>
 
-    <!-- TIKTOK -->
-    <a class="button"
-       href="https://www.tiktok.com/@treasure_jewels_bd"
-       target="_blank">
+            Affordable Price • Premium Look
 
-       <span class="icon">🎵</span>
-       <span>TikTok</span>
+        </p>
 
-    </a>
 
-    <!-- COLLECTION -->
-    <div class="collection">
+        <div class="divider"></div>
 
-        <h2>✨ Discover Your Sparkle</h2>
 
-        <p>
-            Explore our beautiful jewellery collection
-            and find something special for every occasion.
+        <!-- SHOP / ORDER -->
+
+        <a
+            href="https://wa.me/880134084472?text=Hello%20Treasure%20Jewels%20BD,%20I%20want%20to%20place%20an%20order."
+            target="_blank"
+            class="social-button shop"
+        >
+
+            🛍️ Shop / Order Now
+
+        </a>
+
+
+        <!-- FACEBOOK -->
+
+        <a
+            href="https://www.facebook.com/treasurejewelsbd"
+            target="_blank"
+            class="social-button facebook"
+        >
+
+            🔵 Follow us on Facebook
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+            href="https://www.instagram.com/treasure_jewels_bd/"
+            target="_blank"
+            class="social-button instagram"
+        >
+
+            📸 Follow us on Instagram
+
+        </a>
+
+
+        <!-- TIKTOK -->
+
+        <a
+            href="https://www.tiktok.com/@treasure_jewels_bd"
+            target="_blank"
+            class="social-button tiktok"
+        >
+
+            🎵 Follow us on TikTok
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            href="https://wa.me/880134084472"
+            target="_blank"
+            class="social-button whatsapp"
+        >
+
+            💬 Chat With Us on WhatsApp
+
+        </a>
+
+
+        <p class="scan-text">
+
+            Thank you for visiting Treasure Jewels BD 💎
+
+            <br>
+
+            Follow us to discover our latest collections.
+
         </p>
 
     </div>
 
-    <!-- FOOTER -->
-    <div class="footer">
-        © 2026 <span>Treasure Jewels BD</span>
+
+    <footer>
+
+        © 2026 Treasure Jewels BD
         <br>
-        Made with ✨ for jewellery lovers
-    </div>
+        All Rights Reserved
+
+    </footer>
 
 </div>
 
